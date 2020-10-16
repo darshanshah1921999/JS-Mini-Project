@@ -1,0 +1,77 @@
+body{
+    margin: 0;
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.button {
+    background: #428bca;
+    padding: 1em 2em;
+    color: #fff;
+    border: 0;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+.button:hover {
+    background: #292f35;
+}
+
+.modal-container{
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    display: none;
+    z-index: 1;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0,0,0,0.5);
+    animation: modalopen 1s;
+}
+@keyframes modalopen {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+.modal-content{
+    margin: 15% auto;
+    width: 30%;
+    box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.2);
+    
+}
+.modal-header h2,
+.modal-footer h3 {
+  margin: 0;
+}
+.modal-header{
+    padding: 1rem;
+    background-color: #428bca;
+    color: #fff;
+}
+.modal-body {
+    padding: 10px 20px;
+    background: #fff;
+}
+.modal-footer{
+    padding: 1rem;
+    background-color: #428bca;
+    color: #fff;
+}
+.close {
+    color: #ccc;
+    float: right;
+    font-size: 30px;
+}
+  
+.close:hover,
+.close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
