@@ -1,0 +1,162 @@
+* {
+  box-sizing: border-box;
+}
+body {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  min-height: 100vh;
+  margin: 0;
+  background-image: url("./images/bgimage.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  color: white;
+}
+.wrapper{
+  width: 80%;
+  height: 100%;
+}
+.container{
+  width: 100%;
+  height: 100%;
+}
+.country{
+  font-size: 4rem;
+  font-weight: bold;
+}
+h2 {
+  padding: 3px;
+  font-size: 3rem;
+  font-weight: bold;
+  margin: 0;
+}
+.line{
+  border-bottom: 1px solid #eee;
+  margin-bottom: 30px;
+}
+.form-container{
+  height: 100%;
+  width: 100%;
+}
+form {
+  width: 100%;
+}
+.input {
+  border: none;
+  font-size: 1.4rem;
+  padding: 1rem 1.5rem;
+  width: 100%;
+  display: block;
+  outline: none;
+}
+.input::placeholder {
+  color: #d5d5d5;
+}
+.container{
+  padding-top:2rem;
+  width: 100%;
+  height: 100%;
+}
+
+.row{
+  height: 20%;
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+}
+
+.date-time-container{
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.time{
+  font-size: 22px;
+}
+
+.date{
+  font-size: 2rem;
+  color: lightgray;
+  padding-bottom: 10px;
+}
+
+.temprature-container{
+  height: 100%;
+  width: 30%;
+  display: flex;
+  justify-content: flex-start;
+}
+.temprature{
+  padding-left: 1rem;
+  font-size: 5rem;
+  font-weight: bold;
+}
+.degree{
+  font-size: 4rem;
+}
+.image-container{
+  height: 100%;
+  display: flex;
+}
+
+.weather-info-container{
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+}
+.weather-prop-container{
+  height: 100%;
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  border: 1px solid white;
+}
+
+.text{
+  font-size: 16px;
+  color: lightgray;
+}
+.value{
+  font-size: 18px;
+}
+.description{
+  font-size: 2rem;
+  color: #d6d5d5;
+}
+.no-padding{
+  padding: 0;
+}
+.des-date-container{
+  display: flex; 
+}
+.image-temp-wrapper{
+  height: 100%;
+  display: flex;
+}
+.alert-container{
+  height: 100%;
+  width: 100%;
+  display: flex;
+  margin-top: 10px;
+  justify-content: center;
+}
+.alert{
+  height: 100%;
+  width: 30%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 18px;
+  background-color: red;
+  border: 2px solid red;
+  border-radius: 5px;
+  padding: 10px;
+}
+.hide{
+  display: none;
+}

@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Weather App</title>
+</head>
+
+<body>
+    <main class="wrapper">
+        <div class="header">
+            <h2 class="line">Weather in your city</h2>
+        </div>
+        <div class="form-container">
+            <form id="form">
+                <input type="text" id="input" class="input" autocomplete="off" placeholder="Enter the city" />
+            </form>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div id="country" class="country">Ahmedabad,In</div>
+            </div>
+            <div class="row">
+                <div class="image-temp-wrapper">
+                    <span class="image-container" id="image">
+                        <img src="./images/01d.svg" height="80px" width="80px" />
+                    </span> 
+                        <span class="temprature" id="temprature">6</span>
+                        <span class="degree"><sup>°</sup>C</span>
+    
+                </div>
+                
+
+            </div>
+            <div class="row no-padding">
+                <div id="description" class="description">Clear sky</div>
+            </div>
+            <div class="row  no-padding">
+                <div class="date-time-container">
+                    <div class="date" id="date">Sun Oct 25 2020
+                    </div>
+                </div>
+            </div>
+            <div class="line"></div>
+        </div>
+        <div class="row">
+            <div class="weather-info-container">
+                <div class="weather-prop-container padding">
+                    <span class="text">Sunrise: </span>
+                    <span id="sunrise" class="value"></span>
+                </div>
+                <div class="weather-prop-container">
+                    <span class="text">Sunset: </span>
+                    <span id="sunset" class="value"></span>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="weather-info-container">
+                <div class="weather-prop-container padding">
+                    <span class="text">Pressure: </span>
+                    <span id="pressure" class="value"></span>
+                </div>
+                <div class="weather-prop-container">
+                    <span class="text">Humidity: </span>
+                    <span id="humidity" class="value"></span>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="weather-info-container">
+                <div class="weather-prop-container padding">
+                    <span class="text">Minimum Temprature: </span>
+                    <span id="min-temp" class="value"></span>
+                </div>
+                <div class="weather-prop-container">
+                    <span class="text">Maximum Temprature: </span>
+                    <span id="max-temp" class="value"></span>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="weather-info-container">
+                <div class="weather-prop-container padding">
+                    <span class="text">Visibility: </span>
+                    <span id="visibility" class="value"></span>
+                </div>
+                <div class="weather-prop-container">
+                    <span class="text">Wind speed: </span>
+                    <span id="windspeed" class="value"></span>
+                </div>
+            </div>
+        </div>
+        <div class="alert-container hide" id="alert">
+            <div class="alert">Please enter valid city</div>
+        </div>
+    </main>
+
+
+    <script src="index.js"></script>
+</body>
+
+</html>
