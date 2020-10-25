@@ -1,3 +1,4 @@
+//get All Ui components related weather
 const getAllUiComponents = ()=>{
     return {
         country: document.getElementById("country"),
@@ -18,8 +19,8 @@ const getAllUiComponents = ()=>{
 
 }
 
-const showAlert = (isSuccess) => {
-    let message = "";
+//show alert for 3 second
+const showAlert = () => {
     const alertEl = document.getElementById("alert")
     alertEl.classList.toggle("hide");
     setTimeout(()=>{alertEl.classList.toggle("hide")},3000)
@@ -31,22 +32,26 @@ const api = {
 	url: "https://api.openweathermap.org/data/2.5/weather",
 }
 
+//method for getting data from city
 const getDataFromCity = (city) =>{
     fetch(`${api.url}?q=${city}&units=metric&appid=${api.key}`)
 	.then(weather => {
 		if(weather.ok) {
             return weather.json();
 		} else {
-            showAlert(false)
+            showAlert()
             return false;
 		}
 	}).then(displayWeather)
 }
 
+//method for getting time as string from date
 const getTimeFromDate = (val) =>{
     const date = new Date(val*1000);
     return `${date.getHours()}:${date.getMinutes()}`
 }
+
+//method for display weather
 const displayWeather = (weather) => {
     if(weather){
         const uiComponents = getAllUiComponents();
@@ -67,6 +72,8 @@ const displayWeather = (weather) => {
     }
 }
 
+
+//IIFE for setting data to first time
 (function() {
     const form = document.getElementById("form");
     form.addEventListener("submit", (e) => {
